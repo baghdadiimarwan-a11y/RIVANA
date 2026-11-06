@@ -21,6 +21,7 @@ import {
   ProductsSlider,
   SliderProductsWithHeader,
   EnhancedSquareBanners,
+  RV_CategoryTabs,
 } from './components/home';
 import { Blog } from './components/home/Blog';
 import {
@@ -77,6 +78,7 @@ registerHomeComponents({
   'slider-products-with-header': SliderProductsWithHeader,
   'enhanced-square-banners': EnhancedSquareBanners,
   blog: Blog,
+  'rv-category-tabs': RV_CategoryTabs,
 });
 
 // Wrapper `<section>` classes for `featured-products` — the engine only styles

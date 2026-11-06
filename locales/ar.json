@@ -94,5 +94,12 @@
   "blocks.order_options.subtitle": "اختر من الخيارات المتاحة.",
   "blocks.order_options.continue": "متابعة",
   "blocks.order_options.total": "الإجمالي",
-  "blocks.order_options.required_message": "يرجى تعبئة الحقول المطلوبة"
+  "blocks.order_options.required_message": "يرجى تعبئة الحقول المطلوبة",
+  "blocks.home.tab": "تبويب",
+  "blocks.home.best_seller": "الأكثر مبيعاً",
+  "blocks.home.latest": "وصل حديثاً",
+  "blocks.home.top_rated": "الأعلى تقييماً",
+  "blocks.home.previous_products": "المنتجات السابقة",
+  "blocks.home.next_products": "المنتجات التالية",
+  "blocks.home.no_products_in_tab": "لا توجد منتجات في هذا القسم حالياً"
 }

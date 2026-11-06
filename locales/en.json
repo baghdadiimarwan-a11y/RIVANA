@@ -94,5 +94,12 @@
   "blocks.order_options.subtitle": "Choose from the available options.",
   "blocks.order_options.continue": "Continue",
   "blocks.order_options.total": "Total",
-  "blocks.order_options.required_message": "Please fill in the required fields"
+  "blocks.order_options.required_message": "Please fill in the required fields",
+  "blocks.home.tab": "Tab",
+  "blocks.home.best_seller": "Best Seller",
+  "blocks.home.latest": "What's Hot",
+  "blocks.home.top_rated": "Top Rated",
+  "blocks.home.previous_products": "Previous products",
+  "blocks.home.next_products": "Next products",
+  "blocks.home.no_products_in_tab": "No products found in this section"
 }

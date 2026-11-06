@@ -10,3 +10,6 @@ coverage/
 tsconfig.tsbuildinfo
 .tanstack/
 app/routeTree.gen.ts
+
+twilight-preview-assets/
+twilight.preview.json
