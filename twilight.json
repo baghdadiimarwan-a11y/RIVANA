@@ -2633,6 +2633,177 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "a8e1329b-734d-4e9c-bf8a-6b5d98f7e2c4",
+            "title": {
+                "en": "Guided Routine Banner",
+                "ar": "بنر الروتين والعناية"
+            },
+            "icon": "sicon-award-ribbon",
+            "path": "home.rv-routine-banner",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان الرئيسي",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "Find Your Routine",
+                    "required": true,
+                    "format": "text",
+                    "description": "العنوان البارز للبنر",
+                    "placeholder": "مثال: Find Your Routine",
+                    "minLength": 1,
+                    "maxLength": 100
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-edit",
+                    "label": "الكلمة المميزة بخط التموج (Squiggle)",
+                    "multilanguage": true,
+                    "id": "highlight_word",
+                    "value": "Routine",
+                    "required": false,
+                    "format": "text",
+                    "description": "اكتب الكلمة الموجودة بالعنوان ليظهر تحتها خط التموج الأصفر",
+                    "placeholder": "مثال: Routine"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "العنوان الفرعي (أعلى العنوان)",
+                    "multilanguage": true,
+                    "id": "subtitle",
+                    "value": "Guided Skincare",
+                    "required": false,
+                    "format": "text",
+                    "description": "نص ترويجي صغير يظهر فوق العنوان",
+                    "placeholder": "مثال: Guided Skincare"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-align-center",
+                    "label": "الوصف التفصيلي",
+                    "multilanguage": true,
+                    "id": "description",
+                    "value": "Not sure where to start? Take our 3-minute skin quiz to get your personalized picks.",
+                    "required": false,
+                    "format": "textarea",
+                    "description": "وصف قصير لتشجيع العميل على اتخاذ إجراء",
+                    "placeholder": "أدخل نص الوصف"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-button-touch",
+                    "label": "نص الزر",
+                    "multilanguage": true,
+                    "id": "button_text",
+                    "value": "Take the Quiz",
+                    "required": false,
+                    "format": "text",
+                    "placeholder": "مثال: Take the Quiz"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-link",
+                    "label": "رابط الزر",
+                    "id": "button_url",
+                    "value": "#",
+                    "required": false,
+                    "format": "url",
+                    "placeholder": "https://..."
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-image",
+                    "label": "صورة البنر",
+                    "id": "image",
+                    "value": "/images/routine-banner.jpg",
+                    "required": false,
+                    "format": "image",
+                    "description": "الصورة التي تظهر في نصف البنر"
+                },
+                {
+                    "id": "image_position",
+                    "icon": "sicon-swap",
+                    "type": "items",
+                    "label": "موقع الصورة بالنسبة للنص",
+                    "format": "dropdown-list",
+                    "source": "Manual",
+                    "required": true,
+                    "selected": [
+                        {
+                            "key": "right",
+                            "label": "جهة اليمين (في العرض العادي)",
+                            "value": "right"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "key": "right",
+                            "label": "جهة اليمين",
+                            "value": "right"
+                        },
+                        {
+                            "key": "left",
+                            "label": "جهة اليسار",
+                            "value": "left"
+                        }
+                    ],
+                    "description": "تحديد جهة ظهور الصورة"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خلفية البنر",
+                    "id": "bg_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#f4efe6",
+                    "description": "اللون الهادئ لخلفية الكرت"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون النصوص",
+                    "id": "text_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1c1917",
+                    "description": "لون العناوين والوصف"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خط التموج (Squiggle)",
+                    "id": "accent_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#f2a900",
+                    "description": "لون الرسمة تحت الكلمة المميزة"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خلفية الزر",
+                    "id": "button_bg_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1c3f39",
+                    "description": "اللون الأساسي للزر وحركة التموج"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون نص الزر",
+                    "id": "button_text_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff",
+                    "description": "لون الخط داخل الزر"
+                }
+            ]
         }
     ],
     "support_url": "https://salla.com/",
