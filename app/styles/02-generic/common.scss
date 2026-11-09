@@ -227,27 +227,16 @@ body {
 /* Components Init*/
 
 salla-modal {
-  &:not(.hydrated) {
-    display: none;
+  &:not(.hydrated),
+  &.s-hidden:not([is-opened]),
+  &[class*="s-offer-modal"]:not([is-opened]),
+  &:has(.s-offer-modal-skeleton):not([is-opened]) {
+    display: none !important;
   }
 }
 
-// Unhydrated web components — reserve space to prevent CLS
-salla-slider {
-  display: block;
-}
-
-salla-advertisement {
-  display: block;
-}
-
-salla-offer-modal,
-salla-login-modal,
-salla-scopes {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 50;
+salla-offer-modal {
+  display: none !important;
 }
 
 salla-localization-modal {

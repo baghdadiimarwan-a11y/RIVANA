@@ -22,6 +22,7 @@ import {
   SliderProductsWithHeader,
   EnhancedSquareBanners,
   RV_CategoryTabs,
+  RV_RoutineBanner,
 } from './components/home';
 import { Blog } from './components/home/Blog';
 import {
@@ -79,6 +80,7 @@ registerHomeComponents({
   'enhanced-square-banners': EnhancedSquareBanners,
   blog: Blog,
   'rv-category-tabs': RV_CategoryTabs,
+  'rv-routine-banner': RV_RoutineBanner,
 });
 
 // Wrapper `<section>` classes for `featured-products` — the engine only styles
