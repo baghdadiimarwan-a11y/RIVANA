@@ -2804,6 +2804,719 @@
                     "description": "لون الخط داخل الزر"
                 }
             ]
+        },
+        {
+            "key": "f3b89012-e567-4a89-91c2-3d7e5f8a9b01",
+            "title": {
+                "en": "Frequently Asked Questions",
+                "ar": "الأسئلة الشائعة"
+            },
+            "icon": "sicon-chat-bubble-dots",
+            "path": "home.rv-faq",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان الرئيسي",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "الأسئلة الشائعة",
+                    "required": true,
+                    "format": "text",
+                    "description": "العنوان الرئيسي لقسم الأسئلة",
+                    "placeholder": "مثال: الأسئلة الشائعة أو Frequently Asked Questions",
+                    "minLength": 1,
+                    "maxLength": 100
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "العنوان الفرعي (أعلى العنوان)",
+                    "multilanguage": true,
+                    "id": "subtitle",
+                    "value": "مركز المساعدة",
+                    "required": false,
+                    "format": "text",
+                    "description": "نص صغير يظهر أعلى العنوان",
+                    "placeholder": "مثال: مركز المساعدة"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-align-center",
+                    "label": "الوصف التوضيحي",
+                    "multilanguage": true,
+                    "id": "description",
+                    "value": "إليك إجابات سريعة ومباشرة حول منتجاتنا، المكونات، وطرق الاستخدام والعناية.",
+                    "required": false,
+                    "format": "textarea",
+                    "description": "وصف قصير يظهر أسفل العنوان الرئيسي",
+                    "placeholder": "أدخل نص الوصف"
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-toggle-off",
+                    "label": "إظهار زر الانتقال",
+                    "id": "show_button",
+                    "format": "switch",
+                    "required": false,
+                    "value": true,
+                    "selected": true,
+                    "description": "تفعيل أو إخفاء الزر الموجود أسفل الوصف"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-button-touch",
+                    "label": "نص الزر",
+                    "multilanguage": true,
+                    "id": "button_text",
+                    "value": "تصفح مركز المساعدة",
+                    "required": false,
+                    "format": "text",
+                    "placeholder": "مثال: تصفح مركز المساعدة"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-link",
+                    "label": "رابط الزر",
+                    "id": "button_url",
+                    "value": "#",
+                    "required": false,
+                    "format": "url",
+                    "placeholder": "https://..."
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-menu-two-lines",
+                    "label": "السماح بفتح أكثر من سؤال معاً",
+                    "id": "allow_multiple",
+                    "format": "switch",
+                    "required": false,
+                    "value": false,
+                    "selected": false,
+                    "description": "عند التفعيل يمكن فتح عدة أسئلة وإجابات في نفس الوقت"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خلفية كروت الأسئلة",
+                    "id": "card_bg_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#f4efe6",
+                    "description": "اللون الهادئ لخلفية كل سؤال"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خلفية القسم",
+                    "id": "bg_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "",
+                    "description": "لون خلفية البلوك بالكامل"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون النصوص",
+                    "id": "text_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1c1917",
+                    "description": "لون الخطوط والعناوين"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خلفية الزر",
+                    "id": "button_bg_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1c3f39",
+                    "description": "لون الزر الأساسي"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون نص الزر",
+                    "id": "button_text_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#ffffff",
+                    "description": "لون الخط داخل الزر"
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "قائمة الأسئلة والإجابات",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 20,
+                    "item_label": "سؤال",
+                    "description": "أضف الأسئلة الشائعة وإجاباتها",
+                    "value": [
+                        {
+                            "items.question": "هل المنتجات مناسبة لجميع أنواع البشرة؟",
+                            "items.answer": "نعم، تركيباتنا مطورة بعناية فائقة بمكونات لطيفة وآمنة تناسب معظم أنواع البشرة، بما في ذلك البشرة الحساسة. وللبشرة شديدة التحسس نوصي دائماً بإجراء اختبار حساسية موضعي قبل الاستخدام الأول."
+                        },
+                        {
+                            "items.question": "كيف أبدأ ببناء روتين العناية المناسب لي؟",
+                            "items.answer": "ننصحك بالبدء بالخطوات الأساسية: الغسول المناسب، المرطب اليومي، وواقي الشمس، ثم إضافة السيرومات المخصصة لاحتياجات بشرتك الفردية تدريجياً."
+                        },
+                        {
+                            "items.question": "هل المكونات طبيعية وآمنة بنسبة 100%؟",
+                            "items.answer": "نعتمد على أنقى المستخلصات الطبيعية المعززة بمركبات علمية مثبتة الفعالية لخلق توازن مثالي بين الأمان العالي والنتائج الملموسة."
+                        },
+                        {
+                            "items.question": "هل يمكنني دمج أكثر من منتج معاً في نفس الوقت؟",
+                            "items.answer": "نعم، معظم منتجاتنا مصممة لتتناغم وتتكامل معاً بسلاسة. يفضل دائماً الترتيب من القوام الأخف (السيروم المائي) وصولاً إلى الأثقل (الكريم المرطب والزيوت)."
+                        },
+                        {
+                            "items.question": "هل المنتجات خالية من القسوة والتجارب على الحيوانات؟",
+                            "items.answer": "بكل تأكيد، جميع منتجاتنا معتمدة وأخلاقية وخالية تماماً من أي تجارب على الحيوانات (Cruelty-Free)."
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "items.question",
+                            "icon": "sicon-chat-conversation-question",
+                            "type": "string",
+                            "label": "نص السؤال",
+                            "value": "",
+                            "format": "text",
+                            "required": true,
+                            "maxLength": 200,
+                            "minLength": 1,
+                            "description": "",
+                            "placeholder": "مثال: هل المنتجات مناسبة لجميع أنواع البشرة؟",
+                            "multilanguage": true
+                        },
+                        {
+                            "id": "items.answer",
+                            "icon": "sicon-chat-bubble-dots",
+                            "type": "string",
+                            "label": "نص الإجابة",
+                            "value": "",
+                            "format": "textarea",
+                            "required": true,
+                            "maxLength": 1000,
+                            "minLength": 1,
+                            "description": "",
+                            "placeholder": "أدخل نص الإجابة بالتفصيل...",
+                            "multilanguage": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "b9c7148a-641e-4512-87ad-92eb5f78c012",
+            "title": {
+                "en": "Instagram Feed",
+                "ar": "منشورات إنستغرام"
+            },
+            "icon": "sicon-instagram",
+            "path": "home.rv-instagram",
+            "fields": [
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان الرئيسي",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "تابعنا على إنستغرام",
+                    "required": true,
+                    "format": "text",
+                    "description": "العنوان البارز للقسم",
+                    "placeholder": "مثال: تابعنا على إنستغرام أو Purity On Gram",
+                    "minLength": 1,
+                    "maxLength": 100
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الوصف أو الحساب",
+                    "multilanguage": true,
+                    "id": "subtitle",
+                    "value": "استكشف أبرز الإطلالات وتجارب العناية والجمال على حسابنا @purity_store",
+                    "required": false,
+                    "format": "text",
+                    "description": "وصف قصير أو اسم حساب المتجر",
+                    "placeholder": "مثال: استكشف أبرز الإطلالات على حسابنا @purity_store"
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-layout-grid",
+                    "label": "عرض داخل حاوية",
+                    "id": "in_container",
+                    "format": "switch",
+                    "required": false,
+                    "value": true,
+                    "selected": true,
+                    "description": "يعرض القسم بعرض محتوى الصفحة، بدلاً من امتداده على كامل عرض الشاشة."
+                },
+                {
+                    "type": "boolean",
+                    "icon": "sicon-arrow-swap",
+                    "label": "إظهار أسهم التنقل",
+                    "id": "show_arrows",
+                    "format": "switch",
+                    "required": false,
+                    "value": true,
+                    "selected": true,
+                    "description": "إظهار أو إخفاء أسهم التنقل بالسلايدر"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-link",
+                    "label": "رابط حساب الإنستغرام الافتراضي",
+                    "id": "instagram_url",
+                    "value": "https://instagram.com",
+                    "required": false,
+                    "format": "url",
+                    "placeholder": "https://instagram.com/your_account"
+                },
+                {
+                    "id": "layout",
+                    "icon": "sicon-layout-01",
+                    "type": "items",
+                    "label": "طريقة العرض",
+                    "format": "dropdown-list",
+                    "source": "Manual",
+                    "required": true,
+                    "selected": [
+                        {
+                            "key": "slider",
+                            "label": "سلايدر متحرك (Slider Carousel)",
+                            "value": "slider"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "key": "slider",
+                            "label": "سلايدر متحرك (Slider Carousel)",
+                            "value": "slider"
+                        },
+                        {
+                            "key": "grid",
+                            "label": "شبكة منتظمة (Grid)",
+                            "value": "grid"
+                        }
+                    ],
+                    "description": "اختر طريقة عرض صور الإنستغرام"
+                },
+                {
+                    "id": "items_per_view",
+                    "icon": "sicon-layout-04",
+                    "type": "items",
+                    "label": "عدد الصور في العرض للشاشات الكبيرة",
+                    "format": "dropdown-list",
+                    "source": "Manual",
+                    "required": true,
+                    "selected": [
+                        {
+                            "key": "6",
+                            "label": "6 صور",
+                            "value": "6"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "key": "4",
+                            "label": "4 صور",
+                            "value": "4"
+                        },
+                        {
+                            "key": "5",
+                            "label": "5 صور",
+                            "value": "5"
+                        },
+                        {
+                            "key": "6",
+                            "label": "6 صور",
+                            "value": "6"
+                        }
+                    ],
+                    "description": "عدد الصور الظاهرة معاً على شاشات الكمبيوتر"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خلفية القسم",
+                    "id": "bg_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "",
+                    "description": "لون خلفية البلوك بالكامل"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون النصوص",
+                    "id": "text_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1c1917",
+                    "description": "لون العنوان والوصف"
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "صور الإنستغرام",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 16,
+                    "item_label": "صورة إنستغرام",
+                    "description": "أضف صور الإنستغرام وروابط المنشورات الخاصة بها",
+                    "value": [
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/5b6339f5-2a33-4839-a0b1-b137635d9dc9-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 1"
+                        },
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/9728bb9d-8b3c-4544-8622-f831ffbb4cc8-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 2"
+                        },
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/9ba84532-5657-4e7a-9f3a-84072c0b7aa5-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 3"
+                        },
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/de7efc56-52db-48ad-91f2-6d1e81932803-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 4"
+                        },
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/aa5ff547-5126-4497-b072-7490b9e3e0a9-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 5"
+                        },
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/caf0410b-73cb-47e2-8d52-76ed4c621c5b-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 6"
+                        },
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/4a6cb788-71cd-490d-942d-dffcd4e04d95-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 7"
+                        },
+                        {
+                            "items.image": "https://cdn.files.salla.network/other/1935351587/8cd25499-8644-4af9-b7b9-da7e4274b403-standard.jpeg",
+                            "items.url": "https://instagram.com",
+                            "items.alt": "منشور إنستغرام 8"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "items.image",
+                            "icon": "sicon-image",
+                            "type": "string",
+                            "label": "صورة المنشور",
+                            "value": null,
+                            "format": "image",
+                            "required": true,
+                            "description": "صورة مربعة أو طولية للمنشور"
+                        },
+                        {
+                            "id": "items.url",
+                            "icon": "sicon-link",
+                            "type": "string",
+                            "label": "رابط المنشور (اختياري)",
+                            "value": "",
+                            "format": "url",
+                            "required": false,
+                            "placeholder": "https://instagram.com/p/..."
+                        },
+                        {
+                            "id": "items.alt",
+                            "icon": "sicon-type-square",
+                            "type": "string",
+                            "label": "نص وصفي للصورة (Alt Text)",
+                            "value": "",
+                            "format": "text",
+                            "required": false,
+                            "placeholder": "وصف مختصر للصورة"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "d5a82194-912b-47e1-8cb2-140fa97e3a61",
+            "title": {
+                "en": "Store Features & Trust Badges",
+                "ar": "مميزات المتجر والشارات"
+            },
+            "icon": "sicon-award-badge",
+            "path": "home.rv-store-features",
+            "fields": [
+                {
+                    "id": "columns",
+                    "icon": "sicon-layout-04",
+                    "type": "items",
+                    "label": "عدد المميزات في الصف الواحد",
+                    "format": "dropdown-list",
+                    "source": "Manual",
+                    "required": true,
+                    "selected": [
+                        {
+                            "key": "3",
+                            "label": "3 مميزات",
+                            "value": "3"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "key": "3",
+                            "label": "3 مميزات",
+                            "value": "3"
+                        },
+                        {
+                            "key": "4",
+                            "label": "4 مميزات",
+                            "value": "4"
+                        }
+                    ],
+                    "description": "عدد الأعمدة المعروضة للشاشات الكبيرة"
+                },
+                {
+                    "id": "media_type",
+                    "icon": "sicon-image-text",
+                    "type": "items",
+                    "label": "نوع العرض (أيقونات أم صور/شارات)",
+                    "format": "dropdown-list",
+                    "source": "Manual",
+                    "required": true,
+                    "selected": [
+                        {
+                            "key": "image",
+                            "label": "شارات وصور مخصصة (Badges & Images)",
+                            "value": "image"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "key": "image",
+                            "label": "شارات وصور مخصصة (Badges & Images)",
+                            "value": "image"
+                        },
+                        {
+                            "key": "icon",
+                            "label": "أيقونات خطية مدمجة (Line Icons)",
+                            "value": "icon"
+                        }
+                    ],
+                    "description": "اختر نوع العرض الافتراضي للمزايا"
+                },
+                {
+                    "id": "image_size",
+                    "icon": "sicon-image",
+                    "type": "items",
+                    "label": "حجم الصور والشارات",
+                    "format": "dropdown-list",
+                    "source": "Manual",
+                    "required": false,
+                    "selected": [
+                        {
+                            "key": "medium",
+                            "label": "متوسط (64px)",
+                            "value": "medium"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "key": "small",
+                            "label": "صغير (48px)",
+                            "value": "small"
+                        },
+                        {
+                            "key": "medium",
+                            "label": "متوسط (64px)",
+                            "value": "medium"
+                        },
+                        {
+                            "key": "large",
+                            "label": "كبير (80px)",
+                            "value": "large"
+                        }
+                    ],
+                    "description": "التحكم في حجم عرض الشارات أو الصور المرفوعة"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون خلفية القسم",
+                    "id": "bg_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "",
+                    "description": "لون خلفية البلوك بالكامل"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون الأيقونات الخطية",
+                    "id": "icon_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1c1917",
+                    "description": "اللون المخصص للأيقونات الخطية في حال استخدامها"
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-color-palette",
+                    "label": "لون النصوص",
+                    "id": "text_color",
+                    "format": "color",
+                    "required": false,
+                    "value": "#1c1917",
+                    "description": "لون العناوين والوصف"
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "قائمة المميزات أو الشارات",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 8,
+                    "item_label": "ميزة / شارة",
+                    "description": "أضف مميزات المتجر وحدد عنوان ووصف وصورة أو أيقونة كل ميزة",
+                    "value": [
+                        {
+                            "items.title": "خالٍ من القسوة (Cruelty-Free)",
+                            "items.description": "منتجاتنا لم ولن تُجرّب على الحيوانات أبداً، إيماناً منا بأن الرحمة واللطف هما جوهر الجمال الحقيقي.",
+                            "items.icon": "cruelty_free",
+                            "items.image": null,
+                            "items.url": ""
+                        },
+                        {
+                            "items.title": "خالٍ من البارابين (Paraben-Free)",
+                            "items.description": "تركيبات خالية تماماً من البارابين والمواد الكيميائية الضارة، لأننا نؤمن بجمال نظيف وآمن للجميع.",
+                            "items.icon": "paraben_free",
+                            "items.image": null,
+                            "items.url": ""
+                        },
+                        {
+                            "items.title": "صديق للبيئة (Earth-Conscious)",
+                            "items.description": "التزامنا تجاه كوكب الأرض حاضر في كل خطوة من خطوات تصنيع وتغليف منتجاتنا بحلول مستدامة.",
+                            "items.icon": "earth_conscious",
+                            "items.image": null,
+                            "items.url": ""
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "items.title",
+                            "icon": "sicon-format-text-alt",
+                            "type": "string",
+                            "label": "عنوان الميزة أو الشارة",
+                            "value": "",
+                            "format": "text",
+                            "required": true,
+                            "maxLength": 80,
+                            "minLength": 1,
+                            "description": "",
+                            "placeholder": "مثال: Cruelty-Free أو شحن مجاني",
+                            "multilanguage": true
+                        },
+                        {
+                            "id": "items.description",
+                            "icon": "sicon-align-center",
+                            "type": "string",
+                            "label": "نص الوصف",
+                            "value": "",
+                            "format": "textarea",
+                            "required": false,
+                            "maxLength": 250,
+                            "minLength": 0,
+                            "description": "",
+                            "placeholder": "اكتب تفاصيل الميزة أو الشارة باختصار...",
+                            "multilanguage": true
+                        },
+                        {
+                            "id": "items.image",
+                            "icon": "sicon-image",
+                            "type": "string",
+                            "label": "صورة مخصصة / شارة خاصة (Custom Image)",
+                            "value": null,
+                            "format": "image",
+                            "required": false,
+                            "description": "ارفع صورة أو شارة خاصة من جهازك لعرضها هنا"
+                        },
+                        {
+                            "id": "items.icon",
+                            "icon": "sicon-star-outline",
+                            "type": "items",
+                            "label": "أو اختر شارة/أيقونة جاهزة مدمجة",
+                            "format": "dropdown-list",
+                            "source": "Manual",
+                            "required": false,
+                            "selected": [
+                                {
+                                    "key": "cruelty_free",
+                                    "label": "شارة خالي من القسوة (Cruelty-Free)",
+                                    "value": "cruelty_free"
+                                }
+                            ],
+                            "options": [
+                                {
+                                    "key": "cruelty_free",
+                                    "label": "شارة خالي من القسوة (Cruelty-Free)",
+                                    "value": "cruelty_free"
+                                },
+                                {
+                                    "key": "paraben_free",
+                                    "label": "شارة خالي من البارابين (Paraben-Free)",
+                                    "value": "paraben_free"
+                                },
+                                {
+                                    "key": "earth_conscious",
+                                    "label": "شارة صديق للبيئة (Earth-Conscious)",
+                                    "value": "earth_conscious"
+                                },
+                                {
+                                    "key": "box",
+                                    "label": "صندوق شحن (Shipping Box)",
+                                    "value": "box"
+                                },
+                                {
+                                    "key": "badge",
+                                    "label": "شارة ضمان واسترجاع (Guarantee)",
+                                    "value": "badge"
+                                },
+                                {
+                                    "key": "support",
+                                    "label": "دعم ومحادثة (Support Chat)",
+                                    "value": "support"
+                                },
+                                {
+                                    "key": "shield",
+                                    "label": "درع أمان وحماية (Security)",
+                                    "value": "shield"
+                                }
+                            ],
+                            "description": "تُعرض الأيقونة أو الشارة في حال عدم رفع صورة خاصة"
+                        },
+                        {
+                            "id": "items.url",
+                            "icon": "sicon-link",
+                            "type": "string",
+                            "label": "رابط عند النقر (اختياري)",
+                            "value": "",
+                            "format": "url",
+                            "required": false,
+                            "placeholder": "https://..."
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "support_url": "https://salla.com/",

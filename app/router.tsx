@@ -23,6 +23,9 @@ import {
   EnhancedSquareBanners,
   RV_CategoryTabs,
   RV_RoutineBanner,
+  RV_FAQ,
+  RV_InstagramFeed,
+  RV_StoreFeatures,
 } from './components/home';
 import { Blog } from './components/home/Blog';
 import {
@@ -81,6 +84,9 @@ registerHomeComponents({
   blog: Blog,
   'rv-category-tabs': RV_CategoryTabs,
   'rv-routine-banner': RV_RoutineBanner,
+  'rv-faq': RV_FAQ,
+  'rv-instagram': RV_InstagramFeed,
+  'rv-store-features': RV_StoreFeatures,
 });
 
 // Wrapper `<section>` classes for `featured-products` — the engine only styles
